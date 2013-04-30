@@ -21,6 +21,7 @@ class Command(management.AppCommand):
     help = "TODO"
 
     def __init__(self):
+        super(Command, self).__init__()
         self.option_list = super(Command, self).option_list + (
             make_option('--ignore',
                 help='ignore files according to a space-separeated list of patterns e.g. \'*.svn *.tmp\'',
